@@ -1,5 +1,7 @@
 ## BizLab – Digital Business Agency Landing Page
 
+![BizLab preview](bizlab%20%282%29.png)
+
 Modern, responsive landing page built with Tailwind CSS (via CDN) and minimal custom CSS.
 
 ### Features
@@ -31,7 +33,6 @@ assets/
   css/
     style.css        # Overlay utility styles
   img/
-    bizlab (2).png
     bg.jpg
     logo.png
     person.jpg
@@ -62,25 +63,10 @@ Then visit `http://localhost:5500`.
 - **Overlay**: Tweak the overlay color/opacity in `assets/css/style.css`.
 - **Content**: Edit headings, paragraphs, and list items directly in `index.html`.
 
-#### Using your BizLab image
-
-Place your image file named `bizlab (2).png` into `assets/img/`.
-This project references it for:
-
-- Favicon and Apple touch icon
-- Open Graph/Twitter preview image
-- Header logo (desktop and mobile)
-- Section backgrounds (Hero, CTA banner, Stats)
-- Section images (About, Best Solution)
-- Team avatars (all three cards)
-
-If you prefer a different filename, update the paths in `index.html` accordingly.
-
 ### Notes
 
-- Section background images use Tailwind’s arbitrary value syntax, currently set to `bg-[url('assets/img/bizlab (2).png')]`.
-  - If you deploy under a sub-path, relative paths (already used) are recommended.
-  - If you rename the file (e.g., to `bizlab.png`), update the paths in `index.html`.
+- The hero background uses Tailwind’s arbitrary value syntax: `bg-[url('/assets/img/bg.jpg')]`.
+  - If you deploy under a sub-path, consider changing it to a relative path: `bg-[url('assets/img/bg.jpg')]`.
 - The mobile menu markup is present, but there is no custom JS to toggle the `<dialog>` on small screens.
   - Add a small script to open the `#mobile-menu` dialog on burger click and close it on the close button.
 - Forms (`Subscribe` and footer subscribe) are static and non-functional; wire them to your backend or a form service.
